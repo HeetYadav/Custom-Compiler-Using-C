@@ -1,0 +1,44 @@
+
+══════════════════════════════════════════════════
+  Three-Address Code  (29 instructions)
+══════════════════════════════════════════════════
+  IDX   OPCODE        RESULT      ARG1        ARG2      
+  ---   ------        ------      ----        ----      
+
+  ┌─ begin_func  add ─────────────────────────
+  1     ADD           t0          a           b         
+  2     RETURN        -           t0          -         
+  └─ end_func    add ─────────────────────────
+
+
+  ┌─ begin_func  main ─────────────────────────
+  5     COPY          x           5           -         
+  6     COPY          y           10          -         
+  7     PARAM         -           x           -         
+  8     PARAM         -           y           -         
+  9     CALL          t1          add/2args   -         
+  10    COPY          z           t1          -         
+  11    GT            t2          z           10        
+  12    IF_FALSE      L0          t2          -         
+  13    SUB           t3          z           1         
+  14    COPY          z           t3          -         
+  15    GOTO          L1          -           -         
+
+  L0:
+  17    ADD           t4          z           1         
+  18    COPY          z           t4          -         
+
+  L1:
+
+  L2:
+  21    GT            t5          x           0         
+  22    IF_FALSE      L3          t5          -         
+  23    SUB           t6          x           1         
+  24    COPY          x           t6          -         
+  25    GOTO          L2          -           -         
+
+  L3:
+  27    RETURN        -           0           -         
+  └─ end_func    main ─────────────────────────
+
+══════════════════════════════════════════════════

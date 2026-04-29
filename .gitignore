@@ -1,0 +1,18 @@
+# Compiled binaries
+build/lexer
+build/parser
+build/semantic
+build/icg
+build/*.exe
+
+# Generated visualization files
+tests/*.dot
+tests/*.png
+tests/*.svg
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/

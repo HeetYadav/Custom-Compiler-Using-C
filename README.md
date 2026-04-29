@@ -1,8 +1,8 @@
-# miniMIPS Compiler
+# Custom Compiler Using C
 
 A four-stage compiler for a C-subset language, written from scratch in C. It takes source files (`.hehee`) through lexical analysis, parsing, semantic validation, and intermediate code generation, producing Three-Address Code (TAC) as its final output.
 
-This project was built as a compiler architecture study — each pipeline stage compiles independently as a standalone binary and also links cleanly into the next stage, making it straightforward to isolate and inspect any individual phase.
+This project was built as a compiler architecture study each pipeline stage compiles independently as a standalone binary and also links cleanly into the next stage, making it straightforward to isolate and inspect any individual phase.
 
 ---
 
